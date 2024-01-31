@@ -16,4 +16,3 @@ export default function ContactList({ data}) {
     )
 }
 
-// name= {user.name} number={user.number}
