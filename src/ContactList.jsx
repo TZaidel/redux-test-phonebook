@@ -1,18 +1,14 @@
 import Contact from "./Contact.jsx"
 
-export default function ContactList({ data}) {
+export default function ContactList({ data, onDelete}) {
     console.log(data)
     return (
         <ul>
-            {data.map(user => {
-                return (
-                <li key={user.id} >
-                  <Contact data={user} />
-                </li>  
+            {data.map(({id, username, number})  => (
+                <Contact name={username} key={id} number={number} onDelete={()=> onDelete(id)} />
                 )
-            })}
+            )}
         </ul>
-
-    )
+    )   
 }
 

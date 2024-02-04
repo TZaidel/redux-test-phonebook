@@ -1,10 +1,13 @@
-export default function SearchBox() {
+import { Formik, Form, Field  } from "formik"
+
+
+export default function SearchBox({ value, onSearch }) {
   return (
-    <>
-      <form>
+    <Formik>
+      <Form>
         <label>Find contacts by name</label>
-        <input></input>
-    </form>
-    </>
+        <Field value={value} onChange={ onSearch} />
+    </Form>
+    </Formik>
   )
 }

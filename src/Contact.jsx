@@ -1,9 +1,9 @@
-export default function Contact({ data:{id, name, number} }) {
+export default function Contact({ name, number, onDelete} ) {
     return (
-        <div id={id}>
+        <li >
             <h2>{name}</h2>
             <p>{number}</p>
-            <button>Delete</button>
-        </div>
+            <button onClick={onDelete}>Delete</button> 
+        </li>  
     )
 }
