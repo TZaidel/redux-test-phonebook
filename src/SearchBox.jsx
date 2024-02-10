@@ -1,13 +1,10 @@
-import { Formik, Form, Field  } from "formik"
+import css from './SearchBox.module.css'
 
-
-export default function SearchBox({ value, onSearch }) {
+export default function SearchBox({ onChange, value }) {
   return (
-    <Formik>
-      <Form>
-        <label>Find contacts by name</label>
-        <Field value={value} onChange={ onSearch} />
-    </Form>
-    </Formik>
+    <div >
+      <label>Find contacts by name</label>
+      <input name="username" value={value}  onChange={onChange} />
+    </div>
   )
 }
